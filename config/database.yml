@@ -1,0 +1,8 @@
+
+development:
+  adapter: postgresql
+  database: test_wedding_development
+
+test:
+  adapter: postgresql
+  database: test_wedding_test
