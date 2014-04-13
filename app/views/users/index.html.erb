@@ -5,3 +5,12 @@
 <p>If you're planning a wedding on a budget, you already know you aren't going to be able to afford all the bells and whistles that popular culture says you 'should' have. But with careful planning and focus, you can have the best wedding you can afford. This site is here to help.</p>
 </div>
 
+<div class="user_search">
+  <h3>Search for another user:</h3>
+	  <ul>
+	  	<% @users.each do |user| %>
+	  	<li><%= user.user_name %>: <%= user.name %>, <%= user.location %></li>
+	  	<% end %>
+	  </ul>
+</div>
+
