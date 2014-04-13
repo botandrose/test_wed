@@ -13,11 +13,7 @@
 - password
 - total wedding budget
 
-*As a user, I can login or join from the front page, and see who is logged in on every page.
-
-
-
-
+*As a user, I can login or join from the front page, and see that I am logged in on every page.
 
 
 Next
@@ -28,7 +24,9 @@ Next
 *As a user, I can add a picture to my profile.
 
 *As a user, I can connect my profile with another user's profile (mutually), to compare our Wedding Budget Priorities
+
 =======
+
 - an avatar or user picture
 
 to do next:

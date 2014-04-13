@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_path(@user), notice: "Profile created. Welcome!"
+      redirect_to root_url, notice: "Profile created. Welcome!"
     else
       render 'new', notice: "Please check your entries and try again."
     end
@@ -35,6 +35,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user = get_user
+    @session = get_session
+    @session.destroy
+    @user.destroy
+    flash[:notice] = "Profile Deleted!"
+    redirect_to root_path
   end
 
   private
