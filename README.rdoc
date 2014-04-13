@@ -11,3 +11,10 @@
 - password
 - total wedding budget
 - an avatar or user picture
+
+to do next:
+
+- create search function on /show.html.erb page which - when a name is clicked, it routes to the user page
+- write user_path, for login/landing page for specific user
+- finish CRUD functionality: edit, update, destroy
+- allow users to upload a picture via paperclip.
