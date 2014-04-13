@@ -1,0 +1,29 @@
+<%= render("layouts/errors", :object => @user) %>
+
+<%= form_for(@user) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.number_field :email %>
+  </div>
+  <div class="form-group">
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name %>
+  </div>
+   <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+   <div class="form-group">
+    <%= f.label :role %>
+    <%= f.text_field :role %>
+  </div>
+   <div class="form-group">
+    <%= f.label :total_budget %>
+    <%= f.number_field :total_budget %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>

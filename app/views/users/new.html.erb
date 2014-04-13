@@ -1,2 +1,12 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Welcome!</h1>
+<p>We're so glad you're joining our network of happy to-be-weds! Please enter your information below to join.</p>
+
+<%= content_for(:title, "New User") %>
+
+<div class="new-user-container">
+
+  <h3>Required Information</h3>
+
+  <%= render 'form' %>
+
+</div>
