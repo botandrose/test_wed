@@ -12,7 +12,7 @@
     <div id ='user_header'>
     	<% if current_user %>
 	    	Logged in as <%= current_user.user_name %>.
-	    	<%= link_to "Log Out", logout_path %>
+	    	<%= link_to "Log Out", logout_path, method: "delete" %>
     	<% else %>
 	        <%= link_to "Sign Up", new_user_path %> or
 	        <%= link_to "Log In", new_session_path %>
@@ -29,7 +29,9 @@
 	<div id="footer">
 	
 		<%= link_to "Home", root_path %>
-		<%= link_to "View Profile", user_path(current_user) %>
+		<% if current_user %>
+			<%= link_to "View Profile", user_path(current_user) %>
+		<% end %>
 	</div>
 </div>
 </body>
