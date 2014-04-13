@@ -1,8 +1,8 @@
 #Test Wedding App
 
-*As a user, I can create a login and profile on the website
+*As a user, I can create a login (username and password) on the website
 
-*As a user, I can include the following information in my profile:
+*As a user, I can create a profile and include the following information in my profile:
 - name
 - username
 - email
