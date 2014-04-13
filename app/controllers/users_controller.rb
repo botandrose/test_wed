@@ -22,9 +22,16 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to user_path(@user), notice: "Thank you for updating your profile!"
+    else
+      render 'edit', notice: "Please check your information and try again."
+    end
   end
 
   def destroy
