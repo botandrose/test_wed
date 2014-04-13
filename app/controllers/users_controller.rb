@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find
+    @user = User.find(params[:id])
   end
 
   def new
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to user_path(@user), notice: "Welcome!"
+      redirect_to user_path(@user), notice: "Profile created. Welcome!"
     else
       render 'new', notice: "Please check your entries and try again."
     end
