@@ -15,9 +15,11 @@
 
 *As a user, I can login or join from the front page, and see that I am logged in on every page.
 
+*As a user, I can edit/update my profile.
+
+
 
 Next
-*As a user, I can edit/update or delete my profile.
 
 *As a user, I can search for other users and view their profiles.
 
@@ -32,6 +34,5 @@ Next
 to do next:
 
 - create search function on /show.html.erb page which - when a name is clicked, it routes to the user page
-- write user_path, for login/landing page for specific user
-- finish CRUD functionality: edit, update, destroy
+- allow users to delete their profile. does session need to be destroyed before profile?
 - allow users to upload a picture via paperclip.
