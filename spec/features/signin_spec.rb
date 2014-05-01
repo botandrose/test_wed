@@ -15,12 +15,14 @@ feature "Signup" do
     fill_in 'Total budget amount', :with => '1000'
     click_button 'Create User'
     page.should have_content 'Profile created. Welcome!'
+  end
 
-    click_link 'Log Out'
+  scenario "Signing in with proper credentials" do
+    visit root_path
+    click_on 'Log Out'
     page.should have_content 'Logged out!'
-
-    click_link 'Log In' 
-    fill_in 'Email', :with => 'em@ma.com'
+    click_on 'login'
+    fill_in 'Email', :with => 'm@m.com'
     fill_in 'Password', :with => '1234'
     click_button 'Log In'
     page.should have_content 'Logged in!'
