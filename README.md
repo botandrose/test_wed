@@ -1,6 +1,6 @@
+#Wedding Application
 
-
-#Test Wedding App
+##Planning a wedding is a time-consuming and complicated project
 
 *As a user, I can create a login (username and password) on the website.
 
