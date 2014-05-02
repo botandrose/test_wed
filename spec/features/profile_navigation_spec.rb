@@ -29,10 +29,6 @@ feature "Profile Navigation" do
                         total_budget: '1000')
     sign_in(user)
     click_on 'View Profile'
-    page.should have_content 'Edit Profile'
-    page.should have_content 'View Profile'
-    page.should have_content 'Home'
-    page.should have_content 'Log Out'
     click_on 'Edit Profile'
     fill_in 'Name', with: 'Em'
     fill_in 'Email', with: 'emma@ma.com'
