@@ -2,16 +2,11 @@ require 'spec_helper'
 
 feature "Profile Navigation" do
 
+  before { visit '/' }
+  before { create_user }
+
   scenario "Viewing Profile" do
-    user = User.create( name: 'Emma',
-                        email: 'test@test.com',
-                        user_name: 'emmadilemma',
-                        password: 'Password123',
-                        password_confirmation: 'Password123',
-                        location: 'Charlotte, NC',
-                        role: 'Bride',
-                        total_budget: '1000')
-    log_in(user)
+    log_in(@user)
     click_on 'View Profile'
     page.should have_content 'Emma is the Bride!'
     page.should have_content 'Wedding Planning Start Page'
@@ -19,15 +14,7 @@ feature "Profile Navigation" do
   end
 
   scenario "Editing Profile" do
-    user = User.create( name: 'Emma',
-                        email: 'test@test.com',
-                        user_name: 'emmadilemma',
-                        password: 'Password123',
-                        password_confirmation: 'Password123',
-                        location: 'Charlotte, NC',
-                        role: 'Bride',
-                        total_budget: '1000')
-    log_in(user)
+    log_in(@user)
     click_on 'View Profile'
     click_on 'Edit Profile'
     fill_in 'Name', with: 'Em'
