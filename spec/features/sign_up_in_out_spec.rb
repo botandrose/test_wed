@@ -6,22 +6,14 @@ feature "Signup" do
 
   scenario "Signing up as a new user" do
     click_on "Sign Up"
-    user = User.new(   name: 'Emma',
-                email: 'test@test.com',
-                user_name: 'emmadilemma',
-                password: 'Password123',
-                password_confirmation: 'Password123',
-                location: 'Charlotte, NC',
-                role: 'Bride',
-                total_budget: '1000')
-    fill_in 'Name', with: user.name
-    fill_in 'Email', with: user.email
-    fill_in 'Username', with: user.user_name
-    fill_in 'Password', with: user.password
-    fill_in 'Password confirmation', with: user.password_confirmation
-    fill_in 'Location', with: user.location
-    fill_in 'Role in wedding', with: user.role
-    fill_in 'Total budget amount', with: user.total_budget
+    fill_in 'Name', with: 'Emma'
+    fill_in 'Email', with: 'test@test.com'
+    fill_in 'Username', with: 'emmadilemma'
+    fill_in 'Password', with: 'Password123'
+    fill_in 'Password confirmation', with: 'Password123'
+    fill_in 'Location', with: 'Charlotte, NC'
+    fill_in 'Role in wedding', with: 'Bride'
+    fill_in 'Total budget amount', with: '1000'
     click_button 'Create User'
     page.should have_content 'Profile created. Welcome!'
   end
@@ -29,14 +21,14 @@ feature "Signup" do
   scenario "Logging In" do
     user = create_user(email: "m@m.com", role: "Password123")
     click_on "Log In"
-    fill_in 'Email', with: user.email
-    fill_in 'Password', with: user.password
+    fill_in 'Email', with: 'm@m.com'
+    fill_in 'Password', with: 'Password123'
     click_button 'Log In'
     page.should have_content 'Logged in!'
   end
 
   scenario "Logging Out" do
-    user = create_user(name: "Steve", role: "Groom")
+    user = create_user
     log_in(user)
     click_on 'Log Out'
     page.should have_content 'Logged out!'

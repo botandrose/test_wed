@@ -9,12 +9,10 @@ feature "Profile Navigation" do
     log_in(user)
     click_on 'View Profile'
     page.should have_content 'Micahela is the Bride!'
-    page.should have_content 'Wedding Planning Start Page'
-    page.should have_content "total budget is: $"
   end
 
   scenario "Editing Profile" do
-    user = create_user(name: "Emma", role: "bride")
+    user = create_user
     log_in(user)
     click_on 'View Profile'
     click_on 'Edit Profile'
