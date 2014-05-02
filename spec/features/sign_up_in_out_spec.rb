@@ -42,7 +42,6 @@ feature "Signup" do
   end
 
   scenario "Logging Out" do
-    visit root_path
     user = User.create( name: 'Emma',
                         email: 'test@test.com',
                         user_name: 'emmadilemma',
@@ -52,7 +51,6 @@ feature "Signup" do
                         role: 'Bride',
                         total_budget: '1000')
     log_in(user)
-    save_and_open_page
     click_on 'Log Out'
     page.should have_content 'Logged out!'
   end

@@ -3,8 +3,7 @@ require 'spec_helper'
 feature "Profile Navigation" do
 
   scenario "Viewing Profile" do
-    visit new_session_path
-     user = User.create( name: 'Emma',
+    user = User.create( name: 'Emma',
                         email: 'test@test.com',
                         user_name: 'emmadilemma',
                         password: 'Password123',
@@ -12,14 +11,15 @@ feature "Profile Navigation" do
                         location: 'Charlotte, NC',
                         role: 'Bride',
                         total_budget: '1000')
-    sign_in(user)
+    log_in(user)
     click_on 'View Profile'
     page.should have_content 'Emma is the Bride!'
+    page.should have_content 'Wedding Planning Start Page'
+    page.should have_content "total budget is: $"
   end
 
   scenario "Editing Profile" do
-    visit new_session_path
-     user = User.create( name: 'Emma',
+    user = User.create( name: 'Emma',
                         email: 'test@test.com',
                         user_name: 'emmadilemma',
                         password: 'Password123',
@@ -27,7 +27,7 @@ feature "Profile Navigation" do
                         location: 'Charlotte, NC',
                         role: 'Bride',
                         total_budget: '1000')
-    sign_in(user)
+    log_in(user)
     click_on 'View Profile'
     click_on 'Edit Profile'
     fill_in 'Name', with: 'Em'
@@ -40,6 +40,7 @@ feature "Profile Navigation" do
     fill_in 'Total budget amount', with: '10500'
     click_on 'Update User'
     page.should have_content 'Thank you for updating your profile!'
+    page.should have_content 'Wedding Planning Start Page'
     click_on 'Log Out'
     click_on 'Log In'
     fill_in 'Email', with: 'emma@ma.com'
