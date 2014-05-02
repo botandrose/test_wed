@@ -27,17 +27,17 @@ feature "Signup" do
   end
 
   scenario "Logging In" do
-    create_user
+    user = create_user(email: "m@m.com", role: "Password123")
     click_on "Log In"
-    fill_in 'Email', with: @user.email
-    fill_in 'Password', with: @user.password
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
     click_button 'Log In'
     page.should have_content 'Logged in!'
   end
 
   scenario "Logging Out" do
-    create_user
-    log_in(@user)
+    user = create_user(name: "Steve", role: "Groom")
+    log_in(user)
     click_on 'Log Out'
     page.should have_content 'Logged out!'
   end

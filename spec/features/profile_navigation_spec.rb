@@ -3,18 +3,19 @@ require 'spec_helper'
 feature "Profile Navigation" do
 
   before { visit '/' }
-  before { create_user }
 
   scenario "Viewing Profile" do
-    log_in(@user)
+    user = create_user(name: "Micahela", role: "Bride")
+    log_in(user)
     click_on 'View Profile'
-    page.should have_content 'Emma is the Bride!'
+    page.should have_content 'Micahela is the Bride!'
     page.should have_content 'Wedding Planning Start Page'
     page.should have_content "total budget is: $"
   end
 
   scenario "Editing Profile" do
-    log_in(@user)
+    user = create_user(name: "Emma", role: "bride")
+    log_in(user)
     click_on 'View Profile'
     click_on 'Edit Profile'
     fill_in 'Name', with: 'Em'
