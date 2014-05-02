@@ -1,7 +1,6 @@
 require 'spec_helper'
 
-feature "Site Navigation" do
-
+feature "Profile Navigation" do
 
   scenario "Viewing and Editing Profile" do
     visit 'users'
