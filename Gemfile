@@ -25,6 +25,7 @@ group :test, :development do
   gem 'factory_girl'
   gem 'pry'
   gem 'launchy'
+  gem 'coveralls', require: false
 end
 
 group :test do

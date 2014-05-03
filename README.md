@@ -1,5 +1,7 @@
 #Wedding Application
 
+[![Coverage Status](https://coveralls.io/repos/maigen/testing_practice/badge.png)](https://coveralls.io/r/maigen/testing_practice)
+
 ##Planning a wedding is a time-consuming and complicated project
 
 *As a user, I can create a login (username and password) on the website.
