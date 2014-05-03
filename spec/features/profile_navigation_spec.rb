@@ -5,10 +5,13 @@ feature "Profile Navigation" do
   before { visit '/' }
 
   scenario "Viewing Profile" do
-    user = create_user(name: "Micahela", role: "Bride")
+    user = create_user(name: "Micahela", role: "Bride", user_name: "micahela", location: "Portland", total_budget: 10000)
     log_in(user)
     click_on 'View Profile'
     page.should have_content 'Micahela is the Bride!'
+    page.should have_content 'Username: micahela'
+    page.should have_content 'Location: Portland'
+    page.should have_content "Micahela's total budget is: $10,000"
   end
 
   scenario "Editing Profile" do
