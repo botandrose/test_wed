@@ -2,50 +2,38 @@ require 'spec_helper'
 
 feature "Profile Navigation" do
 
-  scenario "Viewing and Editing Profile" do
-    visit 'users'
-    click_link 'Sign Up'
-    fill_in 'Name', :with => 'Emma'
-    fill_in 'Email', :with => 'm@m.com'
-    fill_in 'Username', :with => 'emmadilemma'
-    fill_in 'Password', :with => '1234'
-    fill_in 'Password confirmation', :with => '1234'
-    fill_in 'Location', :with => 'Charlotte, NC'
-    fill_in 'Role in wedding', :with => 'Bride'
-    fill_in 'Total budget amount', :with => '1000'
-    click_button 'Create User'
-    page.should have_content 'Profile created. Welcome!'
-    visit root_path
-    click_on 'Log Out'
-    page.should have_content 'Logged out!'
-    click_on 'Log In'
-    fill_in 'Email', :with => 'm@m.com'
-    fill_in 'Password', :with => '1234'
-    page.should have_content 'Home'
-    click_button 'Log In'
-    page.should have_content 'Logged in as emmadilemma.'
+  before { visit '/' }
+
+  scenario "Viewing Profile" do
+    user = create_user(name: "Micahela", role: "Bride", user_name: "micahela", location: "Portland", total_budget: 10000)
+    log_in(user)
     click_on 'View Profile'
-    page.should have_content 'Emma is the Bride!'
+    page.should have_content 'Micahela is the Bride!'
+    page.should have_content 'Username: micahela'
+    page.should have_content 'Location: Portland'
+    page.should have_content "Micahela's total budget is: $10,000"
+  end
+
+  scenario "Editing Profile" do
+    user = create_user
+    log_in(user)
+    click_on 'View Profile'
     click_on 'Edit Profile'
-    page.should have_content 'Edit Profile'
-    page.should have_content 'View Profile'
-    page.should have_content 'Home'
-    page.should have_content 'Log Out'
-    page.should have_content 'Logged in as emmadilemma.'
-    fill_in 'Name', :with => 'Em'
-    fill_in 'Email', :with => 'emma@ma.com'
-    fill_in 'Username', :with => 'EmmaD'
-    fill_in 'Password', :with => '123456'
-    fill_in 'Password confirmation', :with => '123456'
-    fill_in 'Location', :with => 'Portland, OR'
-    fill_in 'Role in wedding', :with => 'Bride'
-    fill_in 'Total budget amount', :with => '10000'
+    fill_in 'Name', with: 'Em'
+    fill_in 'Email', with: 'emma@ma.com'
+    fill_in 'Username', with: 'EmmaD'
+    fill_in 'Password', with: '123456Password'
+    fill_in 'Password confirmation', with: '123456Password'
+    fill_in 'Location', with: 'Portland, OR'
+    fill_in 'Role in wedding', with: 'Bride'
+    fill_in 'Total budget amount', with: '10500'
     click_on 'Update User'
     page.should have_content 'Thank you for updating your profile!'
+    page.should have_content 'Wedding Planning Start Page'
     click_on 'Log Out'
     click_on 'Log In'
-    fill_in 'Email', :with => 'emma@ma.com'
-    fill_in 'Password', :with => '123456'
+    fill_in 'Email', with: 'emma@ma.com'
+    fill_in 'Password', with: '123456Password'
     click_button 'Log In'
     page.should have_content 'Logged in as EmmaD'
   end
