@@ -1,5 +1,6 @@
 #Wedding Application
 
+[![Build Status](https://travis-ci.org/maigen/testing_practice.svg?branch=master)](https://travis-ci.org/maigen/testing_practice)
 [![Coverage Status](https://coveralls.io/repos/maigen/testing_practice/badge.png)](https://coveralls.io/r/maigen/testing_practice)
 
 ##Planning a wedding is a time-consuming and complicated project
