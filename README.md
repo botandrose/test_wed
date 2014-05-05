@@ -1,41 +1,60 @@
-#Wedding Application
+#Testing Practice
 
 [![Build Status](https://travis-ci.org/maigen/testing_practice.svg?branch=master)](https://travis-ci.org/maigen/testing_practice)
 [![Coverage Status](https://coveralls.io/repos/maigen/testing_practice/badge.png)](https://coveralls.io/r/maigen/testing_practice)
 
-##Planning a wedding is a time-consuming and complicated project
+##Budget App
+
+###Planning a budget is time-consuming and complicated. This application seeks to make the process a little less frustrating by enabling users to collaborate, better prioritize their needs and allocate funds wisely.
+
+##Epic #1 - User Profiles
 
 *As a user, I can create a login (username and password) on the website.
-
+*As a user, I can login or join from the front page, and see that I am logged in on every page.
+*As a user, if I am not logged in, only certain pages are visible to me.
 *As a user, I can create a profile and include the following information in my profile:
 - name
 - username
 - email
 - location
-- role in the wedding
-- password
+- role in wedding
 - total wedding budget
-
-*As a user, I can login or join from the front page, and see that I am logged in on every page.
-
+- end date
+- color preferences?
+- style of wedding?
 *As a user, I can edit/update my profile.
+*As a user, I can go to the Wedding Budget Checklist and choose those items which matter most to me in my wedding.
+*As a user, I can 'weight' those choices by assigning a priority to them.
+*As a user, I can invite/link my account to my fiance's user account.
+(Possibly?)*As a user, I can add a picture to my profile. (why does the user need this?)
 
+(should this next item be in Epic 1 or 2?)
+*As a user, when my fiance's account and mine are linked, our home pages will display those wedding budget checklist items we BOTH chose, in order of combined priority weight.
+*As a user, below where my homepage displays those checklist items we both chose, it also shows our individual choices in priority order, allowing us to discuss what items to include if we end up with a higher budget.
 
+##Epic #2 - Wedding Budget Checklist
+*As a user, I want to see all of the possible Budget Checklist Items.
+*As a user, I want to choose which Budget Checklist Items I want to include in my personal list.
+*As a user, I want to assign a priority level to each item in my personal list.
+*As a user, I want to be able to click on any of the Budget Checklist Items and be taken to its page.
+*As a user, when I visit the Budget Checklist Item page, I want to see the individual item's information:
+- the *usual* percentage of the total budget, as based on national averages
+- several images/examples of the item
+- at least three specific examples of how to lower the cost of the checklist item.
+- (regional differences?)
+- (potential or recommended vendors for the checklist item?)
 
-Next
+##Epic #3 - Vendor and Venue Information
+*As a user, I want to see possible Vendors or Venues in my area for each Budget Checklist Item.
+*As a user, I would like to see as much possible relevant information about each Vendor or Venue:
+- decor/style?
+- number of people it can hold? (venue specific)
+- what is included in their services?
+- approximate level of cost ($ - $$ - $$$ - $$$$, etc.)
+- specialties?
 
-*As a user, I can search for other users and view their profiles.
+##(Epic #4 - Inspiration Board?)
+*As a user, I would like to be able to save images I find inspiring to my own wedding planning 'board'
+*As a user, I would like to be able to browse other users (in my region?) for more inspiration
+*As a user, I would like to be able to recommend a vendor or venue I used/am using in planning my wedding
 
-*As a user, I can add a picture to my profile.
-
-*As a user, I can connect my profile with another user's profile (mutually), to compare our Wedding Budget Priorities
-
-=======
-
-- an avatar or user picture
-
-to do next:
-
-- create search function on /show.html.erb page which - when a name is clicked, it routes to the user page
-- allow users to delete their profile. does session need to be destroyed before profile?
-- allow users to upload a picture via paperclip.
