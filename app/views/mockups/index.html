@@ -7,11 +7,11 @@
     <label for="speculated_amount">How much do you want to spend?</label> <br> (if not sure, leave empty)
     <input type="text" id="speculated_amount"><br><br>
 
-    <label for="speculated_amount">How much do you already have saved?</label>
+    <label for="saved">How much do you already have saved?</label>
     <input type="text" id="saved"><br><br>
 
     <label for="months_until">How many months until the wedding?</label>
-    <select id="Months Until Wedding">
+    <select id="months_until">
     <option value="Less">Four Months or less</option>
     <option value="Five">Five Months</option>
     <option value="Six">Six Months</option>
@@ -30,18 +30,15 @@
     <option value="Nineteen">Nineteen Months</option>
     <option value="Twenty">Twenty Months</option>
     </select><br>
-    (This is how long you have to save. We recommend not including the final month prior to the actual wedding date.)<br><br>
+    <p class="aside">(This is how long you have to save. We recommend not including the final month prior to the actual wedding date.)</p>
 
     <label for="monthly_savings">How much can you realistically set aside each month?</label>
-    <input type="text" id="Monthly Savings">
+    <input type="text" id="monthly_savings">
 
     <p>The national average for a wedding in 2013 was $25,200.</p>
-
-    <p>According to the information you have provided, your Total Wedding Budget is: $8,800</p>
+    <div id="budget-result">
+        <p>According to the information you have provided, your Total Wedding Budget is: $<span class="total-budget"></span></p>
+  </div>
 
   </form>
-
-  <div id="budget-result">
-        <p><span class="total-budget"></span></p>
-  </div>
 </div>
