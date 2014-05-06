@@ -1,0 +1,81 @@
+<h1 class="header">Setting Your Total Wedding Budget</h1>
+
+<p class="intro">Weddings are expensive. How expensive, though, is determined by your budget. Answer these few simple questions to understand what you can spend.</p>
+
+<div class="budget-form">
+  <form class="setting-budget">
+    <p>How much do you want to spend? (if not sure, leave empty)</p>
+    <input type="text" name="Speculated Amount"><br>
+
+    <p>Who is contributing to the Wedding Budget?</p><br>
+    <select name="Select Contributors">
+    <option value="us">Just Us</option>
+    <option value="all">Us and all of our Parents</option>
+    <option value="one">Us and one or more Parents</option>
+    <option value="other">Us and another contributor</option>
+    </select>
+
+    <p>How much is each party contributing?</p>
+    <input type="checkbox" name="contributor" value="Just Us">Just Us <input type="text" name="Just Us" placeholder="Amount"><br>
+    <input type="checkbox" name="contributor" value="Parent Set One">First Parent(s) <input type="text" name="Parents One" placeholder="Amount"><br>
+    <input type="checkbox" name="contributor" value="Parent Set Two">Second Parent(s) <input type="text" name="Parents Two" placeholder="Amount"><br>
+    <input type="checkbox" name="contributor" value="Other">Other Contributors <input type="text" name="Other" placeholder="Amount">
+
+    <p>How are they contributing?</p>
+    First Parents:<br>
+    <select name="how-first" multiple>
+      <option value="Lump Sum Contribution">Lump Sum Contribution</option>
+      <option value="Monthly Contribution">Monthly Contribution</option>
+      <option value="Purchase of Specific Items">Purchase of Specific Items</option>
+      <option value="Other Contribution">Other Contribution</option>
+    </select><br><br>
+    Second Parents:<br>
+    <select name="how-second" multiple>
+      <option value="Lump Sum Contribution">Lump Sum Contribution</option>
+      <option value="Monthly Contribution">Monthly Contribution</option>
+      <option value="Purchase of Specific Items">Purchase of Specific Items</option>
+      <option value="Other Contribution">Other Contribution</option>
+    </select><br><br>
+    Other Contributors:<br>
+    <select name="how-other" multiple>
+      <option value="Lump Sum Contribution">Lump Sum Contribution</option>
+      <option value="Monthly Contribution">Monthly Contribution</option>
+      <option value="Purchase of Specific Items">Purchase of Specific Items</option>
+      <option value="Other Contribution">Other Contribution</option>
+    </select><br>
+
+    <p>How many months until the wedding?</p>
+    <select name="Months Until Wedding">
+    <option value="Less">Four Months or less</option>
+    <option value="Five">Five Months</option>
+    <option value="Six">Six Months</option>
+    <option value="Seven">Seven Months</option>
+    <option value="Eight">Eight Months</option>
+    <option value="Nine">Nine Months</option>
+    <option value="Ten">Ten Months</option>
+    <option value="Eleven">Eleven Months</option>
+    <option value="Twelve">Twelve Months</option>
+    <option value="Thirteen">Thirteen Months</option>
+    <option value="Fourteen">Fourteen Months</option>
+    <option value="Fifteen">Fifteen Months</option>
+    <option value="Sixteen">Sixteen Months</option>
+    <option value="Seventeen">Seventeen Months</option>
+    <option value="Eighteen">Eighteen Months</option>
+    <option value="Nineteen">Nineteen Months</option>
+    <option value="Twenty">Twenty Months</option>
+    </select><br>
+    (This is how long you have to save. We recommend not including the final month prior to the actual wedding date.)
+
+    <p>How much can you realistically set aside each month?</p>
+    <input type="text" name="Monthly Savings">
+
+    <p>The national average for a wedding in 2013 was $25,200.</p>
+
+    <p>According to the information you have provided, your Total Wedding Budget is: $8,800</p>
+
+  </form>
+
+  <div id="budget-result">
+        <p><span class="total-budget"></span></p>
+  </div>
+</div>
