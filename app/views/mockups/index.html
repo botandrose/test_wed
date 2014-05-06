@@ -4,48 +4,14 @@
 
 <div class="budget-form">
   <form class="setting-budget">
-    <p>How much do you want to spend? (if not sure, leave empty)</p>
-    <input type="text" name="Speculated Amount"><br>
+    <label for="speculated_amount">How much do you want to spend?</label> <br> (if not sure, leave empty)
+    <input type="text" id="speculated_amount"><br><br>
 
-    <p>Who is contributing to the Wedding Budget?</p><br>
-    <select name="Select Contributors">
-    <option value="us">Just Us</option>
-    <option value="all">Us and all of our Parents</option>
-    <option value="one">Us and one or more Parents</option>
-    <option value="other">Us and another contributor</option>
-    </select>
+    <label for="speculated_amount">How much do you already have saved?</label>
+    <input type="text" id="saved"><br><br>
 
-    <p>How much is each party contributing?</p>
-    <input type="checkbox" name="contributor" value="Just Us">Just Us <input type="text" name="Just Us" placeholder="Amount"><br>
-    <input type="checkbox" name="contributor" value="Parent Set One">First Parent(s) <input type="text" name="Parents One" placeholder="Amount"><br>
-    <input type="checkbox" name="contributor" value="Parent Set Two">Second Parent(s) <input type="text" name="Parents Two" placeholder="Amount"><br>
-    <input type="checkbox" name="contributor" value="Other">Other Contributors <input type="text" name="Other" placeholder="Amount">
-
-    <p>How are they contributing?</p>
-    First Parents:<br>
-    <select name="how-first" multiple>
-      <option value="Lump Sum Contribution">Lump Sum Contribution</option>
-      <option value="Monthly Contribution">Monthly Contribution</option>
-      <option value="Purchase of Specific Items">Purchase of Specific Items</option>
-      <option value="Other Contribution">Other Contribution</option>
-    </select><br><br>
-    Second Parents:<br>
-    <select name="how-second" multiple>
-      <option value="Lump Sum Contribution">Lump Sum Contribution</option>
-      <option value="Monthly Contribution">Monthly Contribution</option>
-      <option value="Purchase of Specific Items">Purchase of Specific Items</option>
-      <option value="Other Contribution">Other Contribution</option>
-    </select><br><br>
-    Other Contributors:<br>
-    <select name="how-other" multiple>
-      <option value="Lump Sum Contribution">Lump Sum Contribution</option>
-      <option value="Monthly Contribution">Monthly Contribution</option>
-      <option value="Purchase of Specific Items">Purchase of Specific Items</option>
-      <option value="Other Contribution">Other Contribution</option>
-    </select><br>
-
-    <p>How many months until the wedding?</p>
-    <select name="Months Until Wedding">
+    <label for="months_until">How many months until the wedding?</label>
+    <select id="Months Until Wedding">
     <option value="Less">Four Months or less</option>
     <option value="Five">Five Months</option>
     <option value="Six">Six Months</option>
@@ -64,10 +30,10 @@
     <option value="Nineteen">Nineteen Months</option>
     <option value="Twenty">Twenty Months</option>
     </select><br>
-    (This is how long you have to save. We recommend not including the final month prior to the actual wedding date.)
+    (This is how long you have to save. We recommend not including the final month prior to the actual wedding date.)<br><br>
 
-    <p>How much can you realistically set aside each month?</p>
-    <input type="text" name="Monthly Savings">
+    <label for="monthly_savings">How much can you realistically set aside each month?</label>
+    <input type="text" id="Monthly Savings">
 
     <p>The national average for a wedding in 2013 was $25,200.</p>
 
