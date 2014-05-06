@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Setting a Total Budget' do
 
   scenario "Setting a Budget with One Contributor?" do
-    visit 'budget'
+    visit '/'
     page.should have_content 'Setting Your Total Wedding Budget'
     page.should have_content 'How much do you want to spend?'
     fill_in 'Speculated Amount', with: '10000'
@@ -16,13 +16,13 @@ feature 'Setting a Total Budget' do
     fill_in 'Just Us', with: '7000'
     page.should have_content 'How are they contributing?'
     check 'Lump Sum'
-    check 'Monthly Savings Contribution'
+    check 'Monthly Contribution'
     page.should have_content 'How many months until the wedding?'
-    page.should have_content '(This is how long you have to save. We recommend not including the final month prior to the actual wedding date.'
+    page.should have_content '(This is how long you have to save. We recommend not including the final month prior to the actual wedding date.)'
     select 'Nine Months', from: 'Months Until Wedding'
     page.should have_content 'How much can you realistically set aside each month?'
     fill_in 'Monthly Savings', with: '200'
     page.should have_content 'The national average for a wedding in 2013 was $25,200.'
-    page.should have_content 'According to the information you have provided, your Total Wedding Budget is:'
+    page.should have_content 'According to the information you have provided, your Total Wedding Budget is: $8,800'
   end
 end
