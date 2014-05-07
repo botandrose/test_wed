@@ -8,16 +8,6 @@
 </head>
 <body>
 
- <div id='container'>
-    <div id ='user_header'>
-    	<% if current_user %>
-	    	Logged in as <%= current_user.user_name %>.
-	    	<%= link_to "Log Out", logout_path %>
-    	<% else %>
-	        <%= link_to "Sign Up", new_user_path %> or
-	        <%= link_to "Log In", new_session_path %>
-        <% end %>
-    </div>
 
 
 	<% flash.each do |name, msg| %>
@@ -26,13 +16,6 @@
 
 	<%= yield %>
 
-	<div id="footer">
-	
-		<%= link_to "Home", root_path %>
-		<% if current_user %>
-			<%= link_to "View Profile", user_path(current_user) %>
-		<% end %>
-	</div>
 </div>
 </body>
 </html>
