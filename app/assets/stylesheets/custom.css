@@ -1,0 +1,57 @@
+.container {
+  width: 75%;
+  border: 3px solid gray;
+  border-radius: 25px;
+  margin-top: 5%;
+  margin-bottom: 7%;
+  padding: 2%;
+  background-color: white;
+}
+
+body {
+  background: url(turquoise_pattern.png) !important;
+  font-family: 'Quicksand', cursive;
+  font-size: 18px;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 65px;
+  margin-left: 10%;
+}
+
+h3 {
+  font-family: 'Quicksand', cursive;
+  font-size: 20px;
+  margin: 0 0 50px 14%;
+}
+
+input{
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.aside {
+  font-size: 15px;
+}
+
+.display_budget {
+  margin-top: 40px;
+}
+
+#months_until {
+  width:10%;
+}
+
+#submit_budget_request {
+  margin-top: 10px;
+  background-color: #47B5B7;
+  border: 1px solid grey;
+  font-size: 19px;
+  color: white;
+  text-shadow: 1px 1px 1px grey;
+}
+
+.clear {
+  clear: both;
+}
