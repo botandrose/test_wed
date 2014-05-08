@@ -1,63 +1,74 @@
 <%= layout :application do %>
 
 <div class="container">
-  <h1 class="header">Setting Your Total Wedding Budget</h1>
+  <div class="row">
+    <div id="header" class="col-md-8"><h1>Set a Wedding Budget</h1></div>
+    <div id="subheader"class="col-md-8 col-md-offset-1"><h3>Do you know how much you can spend?</h3></div>
+  </div>
 
-  <p class="intro">Weddings are expensive. How expensive, though, is determined by your budget. Answer these few simple questions to understand what you can spend.</p>
+  <div class="row">
+    <p class="col-md-10 col-md-offset-1 intro">Weddings are expensive. How expensive, though, is determined by your budget. Answer these few simple questions to understand what you can spend.</p>
+  </div>
 
-  <div class="budget-form">
-    <form class="setting-budget">
-      <div class="form-group">
-          <label for="speculated_amount">How much do you want to spend?</label> <br> (if not sure, leave empty)
-          <input type="text" id="speculated_amount"><br><br>
+  <div class="row">
+    <div class="budget_form">
+      <form id="setting_budget">
+        <div class="col-md-10 col-md-offset-1 form-group">
+            <label for="speculated_amount">How much do you want to spend?</label><span class="aside">(if not sure, leave empty)</span><br>
+            <input type="text" id="speculated_amount" autofocus><br>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1 form-group">
+            <label for="saved">How much have you already saved?</label><br>
+            <input type="text" id="saved"><br>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1 form-group">
+            <label for="months_until">How many months until the wedding?</label><br>
+            <input id="months_until" type="number" value="1" min="1">
+            <!-- <p class="aside">(This is how long you have to save. We recommend not including <br>the final month prior to the actual wedding date.)</p> -->
+            <!-- <select id="months_until">
+                <option value="Less">Three Months or less</option>
+                <option value="Four">Four Months</option>
+                <option value="Five">Five Months</option>
+                <option value="Six">Six Months</option>
+                <option value="Seven">Seven Months</option>
+                <option value="Eight">Eight Months</option>
+                <option value="Nine">Nine Months</option>
+                <option value="Ten">Ten Months</option>
+                <option value="Eleven">Eleven Months</option>
+                <option value="Twelve">Twelve Months</option>
+                <option value="Thirteen">Thirteen Months</option>
+                <option value="Fourteen">Fourteen Months</option>
+                <option value="Fifteen">Fifteen Months</option>
+                <option value="Sixteen">Sixteen Months</option>
+                <option value="Seventeen">Seventeen Months</option>
+                <option value="Eighteen">Eighteen Months</option>
+                <option value="Nineteen">Nineteen Months</option>
+                <option value="Twenty">Twenty Months</option>
+            </select> -->
+        </div>
+
+        <div class="col-md-10 col-md-offset-1 form-group">
+            <label for="monthly_savings">How much can you realistically set aside each month?</label><br>
+            <input type="text" id="monthly_savings">
+        </div>
+        <div class="clear"></div>
+        <div class="col-md-2 col-md-offset-1">
+          <button id="submit_budget_request" class="btn btn-default">What's my budget?</button>
+        </div>
+      </form>
+
+      <div class="col-md-10 col-md-offset-1 display_budget">
+        <p>The national average for a wedding in 2013 was $25,200.</p>
+        <div id="budget_result">
+            <p>According to the information you have provided, your Total Wedding Budget is: $<span class="  total_budget"></span></p>
+        </div>
+
       </div>
-
-      <div class="form-group">
-          <label for="saved">How much do you already have saved?</label>
-          <input type="text" id="saved"><br><br>
-      </div>
-
-      <div class="form-group">
-          <label for="months_until">How many months until the wedding?</label>
-          <select id="months_until">
-              <option value="Less">Three Months or less</option>
-              <option value="Four">Four Months</option>
-              <option value="Five">Five Months</option>
-              <option value="Six">Six Months</option>
-              <option value="Seven">Seven Months</option>
-              <option value="Eight">Eight Months</option>
-              <option value="Nine">Nine Months</option>
-              <option value="Ten">Ten Months</option>
-              <option value="Eleven">Eleven Months</option>
-              <option value="Twelve">Twelve Months</option>
-              <option value="Thirteen">Thirteen Months</option>
-              <option value="Fourteen">Fourteen Months</option>
-              <option value="Fifteen">Fifteen Months</option>
-              <option value="Sixteen">Sixteen Months</option>
-              <option value="Seventeen">Seventeen Months</option>
-              <option value="Eighteen">Eighteen Months</option>
-              <option value="Nineteen">Nineteen Months</option>
-              <option value="Twenty">Twenty Months</option>
-          </select>
-          <p class="aside">(This is how long you have to save. We recommend not including the final month prior to the actual wedding date.)</p>
-      </div>
-
-      <div class="form-group">
-          <label for="monthly_savings">How much can you realistically set aside each month?</label>
-          <input type="text" id="monthly_savings">
-      </div>
-
-      <button class="btn btn-info">What's my budget?</button>
-    </form>
-
-    <div class="display_budget">
-      <p>The national average for a wedding in 2013 was $25,200.</p>
-      <div id="budget-result">
-          <p>According to the information you have provided, your Total Wedding Budget is: $<span class="  total-budget"></span></p>
-      </div>
-
     </div>
   </div>
+
 </div>
 
 <% end %>
