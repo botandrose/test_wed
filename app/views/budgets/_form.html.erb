@@ -1,0 +1,24 @@
+<%= render("layouts/errors", :object => @budget) %>
+
+<%= form_for(@budget) do |f| %>
+  <div class="col-md-10 col-md-offset-1 form-group">
+    <%= f.label :speculated_amount, 'How much do you think you want to spend?' %><br>
+    <%= f.text_field :speculated_amount %>
+  </div>
+  <div class="col-md-10 col-md-offset-1 form-group">
+    <%= f.label :saved, 'How much have you already saved?' %><br>
+    <%= f.text_field :saved %>
+  </div>
+  <div class="col-md-10 col-md-offset-1 form-group">
+    <%= f.label :months_until, 'How many months until the wedding?' %><br>
+    <%= f.number_field :months_until %>
+  </div>
+  <div class="col-md-10 col-md-offset-1 form-group">
+    <%= f.label :monthly_savings, 'How much can you realistically set aside each month?' %><br>
+    <%= f.text_field :monthly_savings %>
+  </div>
+  <div class="clear"></div>
+  <div class="col-md-2 col-md-offset-1">
+    <button id="submit_budget_request" class="btn btn-default">What's my budget?</button>
+  </div>
+<% end %>

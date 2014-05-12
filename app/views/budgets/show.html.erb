@@ -1,0 +1,16 @@
+<% content_for(:header) do %>
+  Show New Budget
+<% end %>
+
+<% content_for(:subheader) do %>
+	Do you know how much you can spend?
+<% end %>
+
+<% content_for(:lead) do %>
+	Weddings are expensive. You should approach your wedding planning having set a budget that is within your means. Given the information you provided, this is your Wedding Budget.
+<% end %>
+
+    <div class="col-md-10 col-md-offset-1 subheader">
+      <p>The national average for a wedding in 2013 was $25,200.</p>
+      <p>According to the information you have provided, your Total Wedding Budget is: <%= number_to_currency(@total_budget, options = {precision: 0}) %></p>
+    </div>
