@@ -1,6 +1,6 @@
 TestWedding::Application.routes.draw do
  
-  root 'budget#index'
+  root 'budgets#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
