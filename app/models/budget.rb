@@ -1,4 +1,4 @@
-class Budget
+class Budget 
 
 	def initialize(speculated_amount, saved, months_until, monthly_savings)
 		@speculated_amount = speculated_amount.to_i
