@@ -1,0 +1,48 @@
+<% content_for(:header) do %>
+  Test Budget Page
+<% end %>
+
+<% content_for(:subheader) do %>
+	Do you know how much you can spend?
+<% end %>
+
+<% content_for(:lead) do %>
+	Weddings are expensive. How expensive, though, is determined by your budget. Answer these few simple questions to understand what you can spend.
+<% end %>
+
+<div class="row">
+  <div class="budget_form">
+    <form id="setting_budget">
+      <div class="col-md-10 col-md-offset-1 form-group">
+          <label for="speculated_amount">How much do you want to spend?</label><span class="aside">(if not sure, leave empty)</span><br>
+          <input type="text" id="speculated_amount" autofocus><br>
+      </div>
+
+      <div class="col-md-10 col-md-offset-1 form-group">
+          <label for="saved">How much have you already saved?</label><br>
+          <input type="text" id="saved"><br>
+      </div>
+
+      <div class="col-md-10 col-md-offset-1 form-group">
+          <label for="months_until">How many months until the wedding?</label><br>
+          <input id="months_until" type="number" value="1" min="1">
+      </div>
+
+      <div class="col-md-10 col-md-offset-1 form-group">
+          <label for="monthly_savings">How much can you realistically set aside each month?</label><br>
+          <input type="text" id="monthly_savings">
+      </div>
+      <div class="clear"></div>
+      <div class="col-md-2 col-md-offset-1">
+        <button id="submit_budget_request" class="btn btn-default">What's my budget?</button>
+      </div>
+    </form>
+
+    <div class="col-md-10 col-md-offset-1 display_budget">
+      <p>The national average for a wedding in 2013 was $25,200.</p>
+        <div id="budget_result">
+            <p>According to the information you have provided, your Total Wedding Budget is: $<span class="total_budget"></span></p>
+        </div>
+    </div>
+  </div>
+</div>
