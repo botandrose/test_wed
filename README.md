@@ -5,6 +5,15 @@
 
 ##Budget App
 
+###MVP
+The absolute most basic thing this Budget Planning App should be able to do is to answer the question: "What is my budget?"
+*As a user, I should be able to speculate how much I would like to spend on my wedding.
+*As a user, I should be able to specify how much I already saved toward my wedding budget.
+*As a user, I should be able to specify how many months remain until my wedding.
+*As a user, I should be able to specify how much money I can reasonably set aside each month until the wedding.
+*As a user, I should be able to see what my actual Total Wedding Budget should be.
+*As a user, this wedding budget calculator assumes me and my fiance are paying for the wedding ourselves. I should have an option to add more than one contributor, such as our parents.
+
 ###Planning a budget is time-consuming and complicated. This application seeks to make the process a little less frustrating by enabling users to collaborate, better prioritize their needs and allocate funds wisely.
 
 ##Epic #1 - User Profiles
@@ -58,3 +67,9 @@
 *As a user, I would like to be able to browse other users (in my region?) for more inspiration
 *As a user, I would like to be able to recommend a vendor or venue I used/am using in planning my wedding
 
+##Epic #5 - Wedding Day Timeline generation
+*As a user, I want to enter the events of the day and have a basic timeline generated for us to follow
+(interactive infographic w/svg)
+
+##Epic #6 - Honeymoon travel planning 
+(peter's app)
