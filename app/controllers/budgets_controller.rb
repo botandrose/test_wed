@@ -11,12 +11,13 @@ class BudgetsController < ApplicationController
 
 	def show
 		@budget = Budget.find(params[:id])
+		@speculated_amount = @budget.speculated_amount
 		@total_budget = @budget.calculate_budget
 	end
 
 	private
 	def budget_params
-		params.require(:budget).permit(:speculated_amount, :saved, :months_until, :monthly_savings)
+		params.require(:budget).permit(:speculated_amount, :amount_saved, :months_until, :monthly_savings)
 	end
 
 end
