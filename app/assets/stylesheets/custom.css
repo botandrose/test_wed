@@ -1,11 +1,5 @@
-.container {
-  width: 75%;
-  border: 3px solid gray;
-  border-radius: 25px;
-  margin-top: 5%;
-  margin-bottom: 7%;
-  padding: 2%;
-  background-color: white;
+.clear {
+  clear: both;
 }
 
 body {
@@ -20,35 +14,27 @@ h1 {
   margin-left: 10%;
 }
 
+.container {
+  width: 75%;
+  border: 3px solid gray;
+  border-radius: 25px;
+  margin-top: 5%;
+  margin-bottom: 7%;
+  padding: 2%;
+  background-color: white;
+}
+
 #subheader {
   font-family: 'Quicksand', cursive;
   font-size: 18px;
   margin: -20px 0 40px 14%;
 }
 
+/*-- Index Page -- */
 input{
   border-radius: 5px;
   padding: 5px;
 }
-
-.aside {
-  font-size: 15px;
-}
-
-.display_budget {
-  margin-top: 40px;
-  font-size: 20px;
-}
-
-.total_calculated_budget {
-  text-align: center;
-  font-weight: 700;
-}
-
-#months_until {
-  width:10%;
-}
-
 #submit_budget_request {
   margin-top: 10px;
   background-color: #47B5B7;
@@ -58,6 +44,11 @@ input{
   text-shadow: 1px 1px 1px grey;
 }
 
-.clear {
-  clear: both;
+/*-- Budget Show Page --*/
+.total_calculated_budget {
+  text-align: center;
+  font-weight: 700;
 }
+
+
+
