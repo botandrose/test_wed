@@ -37,6 +37,12 @@ input{
 
 .display_budget {
   margin-top: 40px;
+  font-size: 20px;
+}
+
+.total_calculated_budget {
+  text-align: center;
+  font-weight: 700;
 }
 
 #months_until {

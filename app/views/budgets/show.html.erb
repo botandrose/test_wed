@@ -1,18 +1,18 @@
 <% content_for(:header) do %>
-  Test Budget Show Page
+  Show New Budget
 <% end %>
 
 <% content_for(:subheader) do %>
-	A great starting point for planning your wedding!
+	Do you know how much you can spend?
 <% end %>
 
 <% content_for(:lead) do %>
-	Weddings are expensive. How expensive, though, should be determined by your budget, not your dreams.
-<% end %> 
+	Weddings are expensive. You should approach your wedding planning having set a budget that is within your means.
+<% end %>
 
- <div class="col-md-10 col-md-offset-1 display_budget">
-  <p>The national average for a wedding in 2013 was $25,200.</p>
-    <div id="budget_result">
-        <p>According to the information you have provided, your Total Wedding Budget is: $<span class="total_budget"></span></p>
-    </div>
-</div>
+  <div class="col-md-10 col-md-offset-1 display_budget">
+    <p>The national average for a wedding in 2013 was $25,200.</p>
+    <p>According to the information you have provided, your Total Wedding Budget is: 
+    	<br><div class="total_calculated_budget"><h2><%= number_to_currency(@total_budget, options = {precision: 0}) %></h2></div></p>
+  </div>
+
