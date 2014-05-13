@@ -1,5 +1,5 @@
 <% content_for(:header) do %>
-  Show New Budget
+  Total Wedding Budget
 <% end %>
 
 
@@ -7,11 +7,14 @@
 	Start with a budget that is within your means!
 <% end %>
 
+<% content_for(:lead) do %>
+	The national average for a wedding in 2013 was $25,200.
+<% end %>
+
 
 
   <div class="col-md-10 col-md-offset-1 lead">
-    <p>The national average for a wedding in 2013 was $25,200.</p>
-    <p>According to the information you entered, your Total Wedding Budget is: 
+    <p>According to the information you entered for the previous questions, you anticipate spending <%= number_to_currency(@speculated_amount, options = {precision: 0}) %> but, according to your actual available funds, your actual <em>Total Wedding Budget</em> is: 
     	<br><div class="total_calculated_budget"><h2><%= number_to_currency(@total_budget, options = {precision: 0}) %></h2></div></p>
   </div>
 
