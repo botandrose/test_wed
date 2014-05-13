@@ -1,14 +1,15 @@
 require 'spec_helper'
 
-
 describe Budget do
-	it 'is initialized with a speculated amount, an amount saved, months until wedding and monthly savings amount' do
-		test_budget = Budget.new("10000", "7000", "9", "200")
-		test_budget.should be_an_instance_of Budget
-	end
 
-	it 'should take in values and return a calculated total' do
-		test_budget = Budget.new("10000", "7000", "9", "200")
+	it { should validate_presence_of :speculated_amount }
+	it { should validate_presence_of :saved }
+	it { should validate_presence_of :months_until }
+	it { should validate_presence_of :monthly_savings }
+
+	it 'should take in required values and return a calculated total' do
+		test_budget = Budget.create(speculated_amount: "10000", saved: "7000", months_until: "9", monthly_savings: "200")
 		test_budget.calculate_budget.should eq "8800"
 	end
+
 end
