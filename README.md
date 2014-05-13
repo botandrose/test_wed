@@ -5,8 +5,9 @@
 
 ##Budget App
 
-###MVP
+##MVP
 The absolute most basic thing this Budget Planning App should be able to do is to answer the question: "What is my budget?"
+
 *As a user, I should be able to speculate how much I would like to spend on my wedding.
 *As a user, I should be able to specify how much I already saved toward my wedding budget.
 *As a user, I should be able to specify how many months remain until my wedding.
