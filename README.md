@@ -23,15 +23,15 @@ The absolute most basic thing this Budget Planning App should be able to do is t
 * As a user, I can login or join from the front page, and see that I am logged in on every page.
 * As a user, if I am not logged in, only certain pages are visible to me.
 * As a user, I can create a profile and include the following information in my profile:
-		*  name
-		*  username
-		*  email
-		*  location
-		*  role in wedding
-		*  total wedding budget
-		*  end date
-		*  color preferences?
-		*  style of wedding?
+    *  name
+    *  username
+    *  email
+    *  location
+    *  role in wedding
+    *  total wedding budget
+    *  end date
+    *  color preferences?
+    *  style of wedding?
 * As a user, I can edit/update my profile.
 * As a user, I can go to the Wedding Budget Checklist and choose those items which matter most to me in my wedding.
 * As a user, I can 'weight' those choices by assigning a priority to them.
@@ -48,20 +48,20 @@ The absolute most basic thing this Budget Planning App should be able to do is t
 * As a user, I want to assign a priority level to each item in my personal list.
 * As a user, I want to be able to click on any of the Budget Checklist Items and be taken to its page.
 * As a user, when I visit the Budget Checklist Item page, I want to see the individual item's information:
-		*  the * usual*  percentage of the total budget, as based on national averages
-		*  several images/examples of the item
-		*  at least three specific examples of how to lower the cost of the checklist item.
-		*  (regional differences?)
-		*  (potential or recommended vendors for the checklist item?)
+    *  the * usual*  percentage of the total budget, as based on national averages
+    *  several images/examples of the item
+    *  at least three specific examples of how to lower the cost of the checklist item.
+    *  (regional differences?)
+    *  (potential or recommended vendors for the checklist item?)
 
 ##Epic #3 *  Vendor and Venue Information
 * As a user, I want to see possible Vendors or Venues in my area for each Budget Checklist Item.
 * As a user, I would like to see as much possible relevant information about each Vendor or Venue:
 *  decor/style?
-		*  number of people it can hold? (venue specific)
-		*  what is included in their services?
-		*  approximate level of cost ($ *  $$ *  $$$ *  $$$$, etc.)
-		*  specialties?
+    *  number of people it can hold? (venue specific)
+    *  what is included in their services?
+    *  approximate level of cost ($ *  $$ *  $$$ *  $$$$, etc.)
+    *  specialties?
 
 ##(Epic #4 *  Inspiration Board?)
 * As a user, I would like to be able to save images I find inspiring to my own wedding planning 'board'
