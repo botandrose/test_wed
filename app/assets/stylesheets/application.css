@@ -47,6 +47,9 @@ input{
 }
 
 /*-- Budget Show Page --*/
+#show_budget_result {
+  margin-top: 25px;
+}
 .total_calculated_budget {
   text-align: center;
   font-weight: 700;
