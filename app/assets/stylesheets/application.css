@@ -1,13 +1,56 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+/*= require bootstrap */
+
+.clear {
+  clear: both;
+}
+
+body {
+  background: url(turquoise_pattern.png) !important;
+  font-family: 'Quicksand', cursive;
+  font-size: 18px;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 65px;
+  margin-left: 10%;
+}
+
+.container {
+  width: 75%;
+  border: 3px solid gray;
+  border-radius: 25px;
+  margin-top: 5%;
+  margin-bottom: 7%;
+  padding: 2%;
+  background-color: white;
+}
+
+#subheader {
+  font-family: 'Quicksand', cursive;
+  font-size: 18px;
+  margin: -20px 0 40px 14%;
+}
+
+/*-- Index Page -- */
+input{
+  border-radius: 5px;
+  padding: 5px;
+}
+#submit_budget_request {
+  margin-top: 10px;
+  background-color: #47B5B7;
+  border: 1px solid grey;
+  font-size: 19px;
+  color: white;
+  text-shadow: 1px 1px 1px grey;
+}
+
+/*-- Budget Show Page --*/
+#show_budget_result {
+  margin-top: 25px;
+}
+.total_calculated_budget {
+  text-align: center;
+  font-weight: 700;
+}
