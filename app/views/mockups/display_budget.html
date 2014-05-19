@@ -1,0 +1,35 @@
+<%= layout :application do %>
+
+
+  <div class="row">
+    <% content_for(:header) do %>
+      Your Checklist Page
+    <% end %>
+
+    <% content_for(:subheader) do %>
+      Let's Start Planning!
+    <% end %>
+
+    <% content_for(:lead) do %>
+      Narrowing down what is important to you is a difficult task - but a very important one. Establishing and sticking to a budget for your special day ensures it will be full of joy and meaning, while starting your life together without financial debt!
+    <% end %>
+
+    <% content_for(:instructions) do %>
+      Below is a list of Your Checklist Items. The average wedding budget breaks down to a set of typical percentages spent on each element. Beside each of your choices is an estimate of how much you should spend. Clicking on any element will take you to its page, where you will find valuable information on ways to save when planning your wedding.
+    <% end %>
+  </div>
+
+  <!-- I would love for this page to be very clean when styled 'permanently'. I like the idea of each element being an image, and on hover, the image fades to 60% opacity and the estimated amount is superimposed.  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 element"></div>
+      <div class="col-md-3 element"></div>
+      <div class="col-md-3 element"></div>
+    </div>
+  </div>
+
+  <div class="clear"></div>
+  <div class="col-md-8 col-md-offset-4 ">
+    <button id="revise_checklist" class="btn btn-default">Revise Your Checklist</button>
+  </div>
+  <% end %>
