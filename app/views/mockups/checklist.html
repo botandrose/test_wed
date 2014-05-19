@@ -1,0 +1,123 @@
+<%= layout :application do %>
+
+
+  <div class="row">
+    <% content_for(:header) do %>
+      Test Checklist Page
+    <% end %>
+
+    <% content_for(:subheader) do %>
+      Do you know what you want?
+    <% end %>
+
+    <% content_for(:lead) do %>
+      Wedding planning can be time-consuming, complicated and overwhelming. This Wedding for 1000 Checklist makes this process less frustrating and more fun by enabling you to better determine and prioritize your wedding needs so you can spend your budget wisely.
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1" id="instructions">
+      <p>Spend a few minutes thinking about those elements of a wedding that are most meaningful to you. What are your Big Day Must Haves? When you're finished, click <em>Help Me Plan!</em> and get started!</p>
+    </div>
+    <div class="checklist_form">
+      <form id="budget_checklist">
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="dress"> Wedding Dress and Accessories
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="groom"> Groom's Attire and Accessories
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="ceremony"> Ceremony Venue
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="reception"> Reception Venue
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="favors"> Favors for Wedding Guests
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="rings"> Wedding Rings
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="parents"> Gifts for Parents
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="transportation"> Transportation and/or Parking
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="bar"> Bar
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="cake"> Wedding Cake
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="photography"> Photography
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="videography"> Videography
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="stationary"> Invitations and Stationary
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="rentals"> Rentals
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="officiant"> Officiant's Fee
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="party"> Wedding Party Gifts
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="dj"> DJ
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="beauty"> Hair and Makeup for Bride
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="musicians"> Live Musicians or Other Entertainment
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="catering"> Meals and Catering
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="flowers"> Wedding Flowers
+        </div>
+
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <input type="checkbox" name="element" value="accessories"> Accessories, Gratuities and Misc
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="col-md-10 col-md-offset-5 ">
+          <button id="submit_checklist" class="btn btn-default">Help Me Plan!</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+
+<% end %>
