@@ -11,7 +11,7 @@ feature 'Setting a Total Budget' do
     fill_in 'How much can you realistically set aside each month?', with: '200'
     click_on "What's my budget?"
     page.should have_content 'The national average for a wedding in 2013 was $25,200.'
-    page.should have_content 'According to the information you entered for the previous questions, you anticipate spending $10,000'
+    page.should have_content 'At this time, you anticipate spending $10,000'
     page.should have_content 'but, according to your available funds, your actual Total Wedding Budget is $8,800'
   end
 end
