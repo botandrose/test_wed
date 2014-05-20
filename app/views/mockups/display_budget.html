@@ -15,21 +15,29 @@
     <% end %>
 
     <% content_for(:instructions) do %>
-      Below is a list of Your Checklist Items. The average wedding budget breaks down to a set of typical percentages spent on each element. Beside each of your choices is an estimate of how much you should spend. Clicking on any element will take you to its page, where you will find valuable information on ways to save when planning your wedding.
+      Below is a list of Your Checklist Items. The average wedding budget breaks down to a set of typical percentages spent on each element. Beside each of your choices is an estimate of how much you should spend.
     <% end %>
   </div>
 
-  <!-- I would love for this page to be very clean when styled 'permanently'. I like the idea of each element being an image, and on hover, the image fades to 60% opacity and the estimated amount is superimposed.  -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 element"></div>
-      <div class="col-md-3 element"></div>
-      <div class="col-md-3 element"></div>
-    </div>
+  <!-- I would love for this page to be very clean when styled 'permanently'. I like the idea of each element being an image with the estimated amount as a opaque bar at the bottom. On hover, the estimated amount bar slides up over the image at 50% opacity and the estimated amount is superimposed larger.  -->
+
+
+  <div class="row" id="display_budget_rows">
+    <div class="col-md-4 element">Wedding Dress and Accessories</div>
+    <div class="col-md-4 element">Reception Venue</div>
+    <div class="col-md-4 element">Wedding Rings</div>
+
+    <div class="col-md-4 element">Wedding Cake</div>
+    <div class="col-md-4 element">Meals and Catering</div>
+    <div class="col-md-4 element">Photography</div>
+
+    <div class="col-md-4 element">Wedding Flowers</div>
+    <div class="col-md-4 element">Ceremony Officiant</div>
   </div>
 
+
   <div class="clear"></div>
-  <div class="col-md-8 col-md-offset-4 ">
-    <button id="revise_checklist" class="btn btn-default">Revise Your Checklist</button>
+  <div class="col-md-12"  id="revise_checklist">
+    <button class="btn btn-default">Revise Your Checklist</button>
   </div>
   <% end %>

@@ -77,7 +77,23 @@ input{
 }
 
 /*-- Checklist Display --*/
+#display_budget_rows {
+  border: 1px solid grey;
+  width: 85%;
+  margin: 10px auto;
+}
+
+.element {
+  border: 1px solid grey;
+  padding: 125px 5px;
+  text-align: center;
+}
 #revise_checklist {
+  text-align: center;
+}
+
+#revise_checklist button {
+  text-align: center;
   margin-top: 10px;
   background-color: #47B5B7;
   border: 1px solid grey;
