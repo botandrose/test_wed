@@ -1,0 +1,43 @@
+require 'spec_helper'
+
+feature 'Setting a Budget, Making a Checklist and Viewing Estimates' do
+
+  scenario "User Sets a Budget with One Contributor, Views Budget Assessment, Makes Checklist Choices and Views Specific Estimates" do
+    visit '/'
+    page.should have_content 'Set a Wedding Budget'
+    fill_in 'How much do you think you want to spend?', with: '10000'
+    fill_in 'How much have you already saved?', with: '7000'
+    fill_in 'How many months until the wedding?', with: '9'
+    fill_in 'How much can you realistically set aside each month?', with: '200'
+    click_on "What's my budget?"
+    page.should have_content 'Your Wedding Budget'
+    page.should have_content 'Knowing your limits is a great start'
+    page.should have_content 'The national average for a wedding in 2013 was $25,200.'
+    page.should have_content 'At this time, you anticipate spending $10,000'
+    page.should have_content 'but, according to your available funds, your actual Total Wedding Budget is $8,800'
+    click_on 'Ready to Start Planning?'
+    page.should have_content 'Making a Checklist'
+    page.should have_content 'Wedding planning can be time-consuming, complicated and overwhelming.'
+    check 'Wedding Dress and Accessories'
+    check 'Reception Venue'
+    check 'Wedding Rings'
+    check 'Wedding Cake'
+    check 'Meals and Catering'
+    check 'Photography'
+    check 'Wedding Flowers'
+    check 'Ceremony Officiant'
+    click_on 'Help Me Plan!'
+    page.should have_content 'Your Checklist Page'
+    page.should have_content 'Let\'s Start Planning!'
+    page.should have_content 'Below is a list of Your Checklist Items.'
+    page.should have_content 'based on your Total Wedding Budget of $10,000'
+    page.should have_content 'Your estimated expense for the Wedding Dress and Accessories is $1200.'
+    page.should have_content 'Your estimated expense for the Reception Venue is $500.'
+    page.should have_content 'Your estimated expense for the Wedding Rings is $500.'
+    page.should have_content 'Your estimated expense for the Wedding Cake is $500.'
+    page.should have_content 'Your estimated expense for the Meals and Catering is $4,700.'
+    page.should have_content 'Your estimated expense for the Photography is $1300.'
+    page.should have_content 'Your estimated expense for the Wedding Flowers is $1100.'
+    page.should have_content 'Your estimated expense for the Ceremony Officiant is $200.'
+  end
+end

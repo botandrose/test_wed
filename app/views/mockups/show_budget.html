@@ -1,0 +1,24 @@
+<% content_for(:header) do %>
+  Your Wedding Budget
+<% end %>
+
+<% content_for(:subheader) do %>
+  Knowing your limits is a great start
+<% end %>
+
+<% content_for(:lead) do %>
+  The national average for a wedding in 2013 was $25,200. 
+<% end %>
+
+<div class="col-md-10 col-md-offset-1 lead" id="show_budget_result">
+  <p>At this time, you anticipate spending $10,000 but, according to your available funds, your actual <em>Total Wedding Budget</em> is 
+    <br><div class="total_calculated_budget"><h2>$8,800</h2></div></p>
+</div>
+
+
+  <div class="clear"></div>
+  <div class="col-md-12"  id="revise_checklist">
+    <form action="/mockups/budget_checklist">
+      <button class="btn btn-default">Ready to Start Planning?</button>
+    </form>
+  </div>

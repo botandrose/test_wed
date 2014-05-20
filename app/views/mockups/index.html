@@ -1,0 +1,39 @@
+<% content_for(:header) do %>
+  Set a Wedding Budget
+<% end %>
+
+<% content_for(:subheader) do %>
+  Do you know how much you can spend?
+<% end %>
+
+<% content_for(:lead) do %>
+  Weddings are expensive. How expensive, though, is determined by your budget. Answer these few simple questions to understand what you can spend.
+<% end %>
+
+<div class="row">
+  <form action="/mockups/show_budget" method="get">
+    <!-- change method to "post" after moving into development -->
+    <div class="budget_form">
+      <div class="col-md-10 col-md-offset-1 form-group">
+        <%= label_tag :speculated_amount, 'How much do you think you want to spend?' %><br>
+        <%= number_field_tag :speculated_amount %>
+      </div>
+      <div class="col-md-10 col-md-offset-1 form-group">
+        <%= label_tag :amount_saved, 'How much have you already saved?' %><br>
+        <%= number_field_tag :amount_saved %>
+      </div>
+      <div class="col-md-10 col-md-offset-1 form-group">
+        <%= label_tag :months_until, 'How many months until the wedding?' %><br>
+        <%= number_field_tag :months_until %>
+      </div>
+      <div class="col-md-10 col-md-offset-1 form-group">
+        <%= label_tag :monthly_savings, 'How much can you realistically set aside each month?' %><br>
+        <%= number_field_tag :monthly_savings %>
+      </div>
+      <div class="clear"></div>
+      <div class="col-md-2 col-md-offset-1">
+        <button id="submit_budget_request" class="btn btn-default">What's my budget?</button>
+      </div>
+    </div>
+  </form>
+</div>
