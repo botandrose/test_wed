@@ -3,7 +3,6 @@ TestWedding::Application.routes.draw do
   root 'budgets#index'
 
   resources :budgets
-  resources :checklists
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
