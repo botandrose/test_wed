@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Budget Checklist' do
 
   scenario "User chooses the Budget Checklist Items they want to include" do
-    visit '/budget_checklist'
+    visit '/checklists'
     page.should have_content 'Making a Checklist'
     page.should have_content 'Do you know what you want?'
     check 'Wedding Dress and Accessories'
