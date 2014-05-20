@@ -13,7 +13,7 @@ feature 'Budget Checklist' do
     check 'Meals and Catering'
     check 'Photography'
     check 'Wedding Flowers'
-    check 'Wedding Officiant'
+    check 'Ceremony Officiant'
     click_on "Help Me Plan!"
   end
 end
