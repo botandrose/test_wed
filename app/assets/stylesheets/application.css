@@ -87,6 +87,7 @@ input{
   border: 1px solid grey;
   padding: 125px 5px;
   text-align: center;
+  height: 300px;
 }
 #revise_checklist {
   text-align: center;
