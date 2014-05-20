@@ -1,3 +1,6 @@
+<%= layout :application do %>
+
+
 <% content_for(:header) do %>
   Your Wedding Budget
 <% end %>
@@ -13,12 +16,16 @@
 <div class="col-md-10 col-md-offset-1 lead" id="show_budget_result">
   <p>At this time, you anticipate spending $10,000 but, according to your available funds, your actual <em>Total Wedding Budget</em> is 
     <br><div class="total_calculated_budget"><h2>$8,800</h2></div></p>
+  <p>When it comes to spending that budget, it's easier to know where to start when you have an idea of what you want. On the next page is a checklist of the elements usually found in a wedding. Click on <em>Wedding Elements Checklist</em> to start making your own list.</p>
+
 </div>
 
 
   <div class="clear"></div>
   <div class="col-md-12"  id="revise_checklist">
     <form action="/mockups/budget_checklist">
-      <button class="btn btn-default">Ready to Start Planning?</button>
+      <button class="btn btn-default">Wedding Elements Checklist</button>
     </form>
   </div>
+
+<% end %>
