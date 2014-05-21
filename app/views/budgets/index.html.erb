@@ -18,7 +18,3 @@
   </div>
 </div>
 
-<div class="col-md-10 col-md-offset-1 lead" id="show_budget_result">
-  <p>At this time, you anticipate spending <%= number_to_currency(@budget.speculated_amount, precision: 0) %> but, according to your available funds, your actual <em>Total Wedding Budget</em> is 
-    <br><div class="total_calculated_budget"><h2><%= number_to_currency(@budget.total_budget, options = {precision: 0}) %></h2></div></p>
-</div>
