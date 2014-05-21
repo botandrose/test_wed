@@ -1,6 +1,6 @@
 <%= render("layouts/errors", :object => @budget) %>
 
-<%= form_for(@budget) do |f| %>
+<%= form_for(@budget, url: budget_path, method: 'get') do |f| %>
 
   <div class="col-md-10 col-md-offset-1 form-group">
     <%= f.label :speculated_amount, 'How much do you think you want to spend?' %><br>
