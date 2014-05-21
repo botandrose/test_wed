@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Setting a Budget, Making a Checklist and Viewing Estimates' do
 
   scenario "User Sets a Budget with One Contributor, Views Budget Assessment, Makes Checklist Choices and Views Specific Estimates" do
-    visit '/mockups/index'
+    visit '/'
     page.should have_content 'Set a Wedding Budget'
     fill_in 'How much do you think you want to spend?', with: '10000'
     fill_in 'How much have you already saved?', with: '7000'
