@@ -6,7 +6,7 @@ class BudgetsController < ApplicationController
 
   def create
     @budget = Budget.new(params[:budget])
-    render :index
+    redirect_to :show
   end
 
 end
