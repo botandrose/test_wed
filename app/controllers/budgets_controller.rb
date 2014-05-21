@@ -6,7 +6,12 @@ class BudgetsController < ApplicationController
 
   def create
     @budget = Budget.new(params[:budget])
-    redirect_to :show
+    redirect_to budget_path
+  end
+
+  def show
+    @budget = Budget.new(params[:budget])
+
   end
 
 end
