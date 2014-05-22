@@ -1,0 +1,39 @@
+<% content_for(:header) do %>
+  Your Checklist Page
+<% end %>
+
+<% content_for(:subheader) do %>
+  Let's Start Planning!
+<% end %>
+
+<% content_for(:lead) do %>
+  Narrowing down what is important to you is a difficult task - but a very important one. Establishing and sticking to a budget for your special day ensures it will be full of joy and meaning, while starting your life together without financial debt!
+<% end %>
+
+<% content_for(:instructions) do %>
+  Below is a list of Your Checklist Items. The average wedding budget breaks down to a set of typical percentages spent on each element. Displayed beside each of your choices is a calculated estimate of how much you should spend based on your Total Wedding Budget of $10,000.
+<% end %>
+
+<!-- I would love for this page to be very clean when styled 'permanently'. I like the idea of each element being an image with the estimated amount as a opaque bar at the bottom. On hover, the estimated amount bar slides up over the image at 50% opacity and the estimated amount is superimposed larger.  -->
+
+
+<div class="row" id="display_budget_rows">
+  <div class="col-md-4 element">Your estimated expense for the Wedding Dress is $1200.</div>
+  <div class="col-md-4 element">Your estimated expense for the Reception Venue is $500.</div>
+  <div class="col-md-4 element">Your estimated expense for the Wedding Rings is $500.</div>
+
+  <div class="col-md-4 element">Your estimated expense for the Wedding Cake is $500.</div>
+  <div class="col-md-4 element">Your estimated expense for the Meals and Catering is $4,700.</div>
+  <div class="col-md-4 element">Your estimated expense for the Photography is $1300.</div>
+
+  <div class="col-md-4 element">Your estimated expense for the Wedding Flowers is $1100.</div>
+  <div class="col-md-4 element">Your estimated expense for the Ceremony Officiant is $200.</div>
+</div>
+
+<div class="clear"></div>
+
+<div class="col-md-12"  id="revise_checklist">
+  <form action="/mockups/budget_checklist">
+    <button class="btn btn-default">Revise Your Checklist</button>
+  </form>
+</div>
