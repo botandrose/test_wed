@@ -32,11 +32,6 @@ h1 {
   margin: -20px 0 40px 14%;
 }
 
-.instructions p {
-  font-size: 17px;
-  margin: 0 0 20px 0;
-}
-
 label {
   font-size: 16px;
   font-weight: 100;
@@ -67,7 +62,13 @@ input{
 }
 
 /*-- Checklist Page --*/
+
 #submit_checklist {
+  text-align: center;
+}
+
+#submit_checklist button {
+  text-align: center;
   margin-top: 10px;
   background-color: #47B5B7;
   border: 1px solid grey;
@@ -89,6 +90,7 @@ input{
   text-align: center;
   height: 300px;
 }
+
 #revise_checklist {
   text-align: center;
 }
