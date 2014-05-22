@@ -1,6 +1,11 @@
 class ChecklistsController < ApplicationController
 
- def new
-   @budget = Budget.new(params[:budget])
- end
+def new
+  @checklist = Checklist.new(params[:checklist])
+end
+
+def show
+  @checklist = Checklist.new(params[:checklist])
+end
+ 
 end
