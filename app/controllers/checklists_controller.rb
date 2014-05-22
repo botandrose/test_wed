@@ -4,7 +4,7 @@ def new
   @checklist = Checklist.new(params[:checklist])
 end
 
-def show
+def create
   @checklist = Checklist.new(params[:checklist])
 end
  
