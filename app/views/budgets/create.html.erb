@@ -22,7 +22,7 @@
   <div class="clear"></div>
   <div class="col-md-12"  id="revise_checklist">
     <form action="/checklist/new" method="get">
-      <input type="hidden" name="total_budget" value="<%= @budget.total_budget %>">
+      <input type="hidden" name="checklist[total_budget]" value="<%= @budget.total_budget %>">
       <button class="btn btn-default">Wedding Elements Checklist</button>
     </form>
   </div>

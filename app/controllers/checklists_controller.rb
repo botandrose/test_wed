@@ -6,7 +6,6 @@ class ChecklistsController < ApplicationController
 
   def create
     @checklist = Checklist.new(params[:checklist])
-    @checklist.total_budget = params[:total_budget]
   end
  
 end
