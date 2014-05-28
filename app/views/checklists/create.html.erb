@@ -11,7 +11,7 @@
 <% end %>
 
 <% content_for(:instructions) do %>
-  Below is a list of Your Checklist Items. The average wedding budget breaks down to a set of typical percentages spent on each element. Displayed beside each of your choices is a calculated estimate of how much you should spend based on your Total Wedding Budget of $10,000.
+  Below is a list of Your Checklist Items. The average wedding budget breaks down to a set of typical percentages spent on each element. Displayed beside each of your choices is a calculated estimate of how much you should spend based on your Total Wedding Budget of <%= number_to_currency @checklist.total_budget, precision: 0 %>.
 <% end %>
 
 <!-- I would love for this page to be very clean when styled 'permanently'. I like the idea of each element being an image with the estimated amount as a opaque bar at the bottom. On hover, the estimated amount bar slides up over the image at 50% opacity and the estimated amount is superimposed larger.  -->

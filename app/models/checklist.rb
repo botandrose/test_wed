@@ -4,4 +4,12 @@ require 'active_model'
 class Checklist 
   include ActiveModel::Model
 
+  def total_budget= value
+    @total_budget = value
+  end
+
+  def total_budget
+    @total_budget
+  end
+
 end
