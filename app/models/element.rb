@@ -4,7 +4,7 @@ class Element
     @percentage = attributes[:percentage]
   end
 
-  # def estimation
-  #   @attributes.fetch(:estimation)
-  # end
+  def estimation
+    @attributes.fetch(:estimation)
+  end
 end
