@@ -8,4 +8,18 @@ describe Checklist do
       subject.total_budget.should == 6900
     end
   end
+
+  describe '#selected_elements' do
+    it 'is an array of elements the user chose to include on their checklist' do
+      subject.selected_elements = [Element.new(estimation: 162), Element.new(estimation: 567)]
+      subject.selected_elements.should == [Element.new(estimation: 162), Element.new(estimation: 567)]
+    end
+  end
+
+  describe '#selected_element_names=' do
+    it 'populates selected_elements with objects in place of supplied names' do
+      subject.selected_element_names = ["Dress", "Rings"]
+      subject.selected_elements.should == [Element.new(name: "Dress"), Element.new(name: "Rings")]
+    end
+  end
 end
