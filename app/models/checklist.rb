@@ -30,7 +30,7 @@ class Checklist
     element_names = []
     @selected_elements.each { |element| element_names << element.instance_values["element"] }
     reduced = total_percent.reduce( :+ )
-    estimated_percentage = total_percent.map! { |value| (value.to_f/reduced.to_f).round(4) }
+    estimated_percentage = total_percent.map! { |value| (value.to_f/reduced.to_f).round(2) }
     estimated_amounts = []
     estimated_percentage.map { |value| estimated_amounts << (value * total_budget) }
     @estimation = Hash[element_names.zip(estimated_amounts)]
