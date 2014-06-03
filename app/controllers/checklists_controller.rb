@@ -1,5 +1,4 @@
 class ChecklistsController < ApplicationController
-
   def new
     @checklist = Checklist.new(params[:checklist])
   end
@@ -7,5 +6,4 @@ class ChecklistsController < ApplicationController
   def create
     @checklist = Checklist.new(params[:checklist])
   end
- 
 end
