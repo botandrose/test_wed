@@ -15,137 +15,15 @@
 <div class="row">
   <div class="checklist_form">
     <%= form_for @checklist, url: checklist_path do |form| %>
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="dress"> Wedding Dress and Accessories
-        </label>
-      </div>
 
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="groom"> Groom's Attire and Accessories
-        </label>
-      </div>
+      <% elements.each do |name, value| %>
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <label>
+            <input type="checkbox" name="checklist[selected_element_names][]" value="<%= name %>"> <%= name %>
+          </label>
+        </div>
+      <% end %>
 
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="ceremony"> Ceremony Venue
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="reception"> Reception Venue
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="favors"> Favors for Wedding Guests
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="rings"> Wedding Rings
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="parents"> Gifts for Parents
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="transportation"> Transportation and/or Parking
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="bar"> Bar
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="cake"> Wedding Cake
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="photography"> Photography
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="videography"> Videography
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="stationary"> Invitations and Stationary
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="rentals"> Rentals
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="officiant"> Ceremony Officiant
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="party"> Wedding Party Gifts
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="dj"> DJ
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="beauty"> Hair and Makeup for Bride
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="musicians"> Live Musicians or Other Entertainment
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="catering"> Meals and Catering
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="flowers"> Wedding Flowers
-        </label>
-      </div>
-
-      <div class="col-md-5 col-md-offset-1 form-group">
-        <label>
-          <input type="checkbox" name="element" value="accessories"> Accessories, Gratuities and Misc
-        </label>
-      </div>
 
       <%= form.hidden_field :total_budget %>
 

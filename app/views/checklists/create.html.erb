@@ -17,23 +17,13 @@
 <!-- I would love for this page to be very clean when styled 'permanently'. I like the idea of each element being an image with the estimated amount as a opaque bar at the bottom. On hover, the estimated amount bar slides up over the image at 50% opacity and the estimated amount is superimposed larger.  -->
 
 
-<div class="row" id="display_budget_rows">
-  <div class="col-md-4 element">Your estimated expense for the Wedding Dress is $1200.</div>
-  <div class="col-md-4 element">Your estimated expense for the Reception Venue is $500.</div>
-  <div class="col-md-4 element">Your estimated expense for the Wedding Rings is $500.</div>
+  <div class="row" id="display_budget_rows">
+    
+    <% @checklist.estimation.each_pair do |name, amount| %>
+      <div class="col-md-4 element">Your estimated expense for the <%= name %> is <%= number_to_currency amount, precision: 0 %>.
+      </div>
+    <% end %>
+  </div>
 
-  <div class="col-md-4 element">Your estimated expense for the Wedding Cake is $500.</div>
-  <div class="col-md-4 element">Your estimated expense for the Meals and Catering is $4,700.</div>
-  <div class="col-md-4 element">Your estimated expense for the Photography is $1300.</div>
-
-  <div class="col-md-4 element">Your estimated expense for the Wedding Flowers is $1100.</div>
-  <div class="col-md-4 element">Your estimated expense for the Ceremony Officiant is $200.</div>
-</div>
 
 <div class="clear"></div>
-
-<div class="col-md-12"  id="revise_checklist">
-  <form action="/mockups/budget_checklist">
-    <button class="btn btn-default">Revise Your Checklist</button>
-  </form>
-</div>
