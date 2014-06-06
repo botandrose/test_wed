@@ -1,10 +1,6 @@
 class Element < Struct.new(:element, :percentage)
   def initialize(attributes)
-    @element = attributes[:element]
-    @percentage = attributes[:percentage]
-  end
-
-  def estimation
-    @attributes.fetch(:estimation)
+    self.element = attributes[:element]
+    self.percentage = attributes[:percentage]
   end
 end
