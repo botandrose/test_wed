@@ -25,16 +25,11 @@ class Checklist
   end
 
   def estimation
-    total_percent = []
-    element_names = []
-    @selected_elements.each do |element|
-      total_percent << element.percentage
-      element_names << element.element
-    end
-    reduced = total_percent.reduce( :+ )
-    estimated_percentage = total_percent.map! { |value| (value.to_f/reduced.to_f).round(2) }
-    estimated_amounts = []
-    estimated_percentage.map { |value| estimated_amounts << (value * total_budget) }
+    total_percent = @selected_elements.map { |element| element.percentage }
+    element_names = @selected_elements.map { |element| element.element }
+    reduced = total_percent.reduce { |sum, percent| sum + percent }
+    estimated_percentage = total_percent.map { |value| (value.to_f/reduced.to_f).round(2) }
+    estimated_amounts = estimated_percentage.map { |value| value * total_budget }
     @estimation = Hash[element_names.zip(estimated_amounts)]
   end
 
