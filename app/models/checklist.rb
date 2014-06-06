@@ -26,9 +26,11 @@ class Checklist
 
   def estimation
     total_percent = []
-    @selected_elements.each { |element| total_percent << element.instance_values["percentage"] }
     element_names = []
-    @selected_elements.each { |element| element_names << element.instance_values["element"] }
+    @selected_elements.each do |element| 
+      total_percent << element.instance_values["percentage"] 
+      element_names << element.instance_values["element"]
+    end
     reduced = total_percent.reduce( :+ )
     estimated_percentage = total_percent.map! { |value| (value.to_f/reduced.to_f).round(2) }
     estimated_amounts = []
