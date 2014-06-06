@@ -18,8 +18,14 @@ describe Checklist do
 
   describe '#selected_element_names=' do
     it 'populates selected_elements with objects in place of supplied names' do
-      subject.selected_element_names = ["Dress", "Rings"]
-      subject.selected_elements.should == [Element.new(element: "Dress", percentage: 7.5), Element.new(element: "Rings", percentage: 3)]
+      subject.selected_element_names = [
+        "Wedding Dress and Accessories",
+        "Wedding Rings"
+      ]
+      subject.selected_elements.should == [
+        Element.new(element: "Wedding Dress and Accessories", percentage: 7.5),
+        Element.new(element: "Wedding Rings", percentage: 3)
+      ]
     end
   end
 end
