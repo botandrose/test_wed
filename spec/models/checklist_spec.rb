@@ -28,4 +28,18 @@ describe Checklist do
       ]
     end
   end
+
+  describe '#estimation' do
+    it 'calculates element budgets' do
+      subject.total_budget = 100
+      subject.selected_element_names = [
+        "Groom's Attire and Accessories",
+        "Wedding Rings"
+      ]
+      subject.estimation.should == {
+        "Groom's Attire and Accessories" => 40,
+        "Wedding Rings" => 60
+      }
+    end
+  end
 end
