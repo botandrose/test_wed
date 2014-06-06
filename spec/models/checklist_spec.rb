@@ -20,11 +20,11 @@ describe Checklist do
     it 'populates selected_elements with objects in place of supplied names' do
       subject.selected_element_names = [
         "Wedding Dress and Accessories",
-        "Wedding Rings"
+        "Wedding Cake"
       ]
       subject.selected_elements.should == [
         Element.new(element: "Wedding Dress and Accessories", percentage: 7.5),
-        Element.new(element: "Wedding Rings", percentage: 3)
+        Element.new(element: "Wedding Cake", percentage: 3)
       ]
     end
   end
@@ -34,11 +34,11 @@ describe Checklist do
       subject.total_budget = 100
       subject.selected_element_names = [
         "Groom's Attire and Accessories",
-        "Wedding Rings"
+        "Wedding Cake"
       ]
       subject.estimation.should == {
         "Groom's Attire and Accessories" => 40,
-        "Wedding Rings" => 60
+        "Wedding Cake" => 60
       }
     end
   end
