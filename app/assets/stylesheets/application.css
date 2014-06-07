@@ -6,8 +6,8 @@
 
 body {
   background: url(turquoise_pattern.png) !important;
-  font-family: 'Quicksand', cursive;
-  font-size: 18px;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
 }
 
 h1 {
@@ -32,6 +32,16 @@ h1 {
   margin: -20px 0 40px 14%;
 }
 
+.lead {
+  max-width: 80%;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 10px;
+}
+
 /*-- Index Page -- */
 input{
   border-radius: 5px;
@@ -53,4 +63,47 @@ input{
 .total_calculated_budget {
   text-align: center;
   font-weight: 700;
+}
+
+/*-- Checklist Page --*/
+
+#submit_checklist {
+  text-align: center;
+}
+
+#submit_checklist button {
+  text-align: center;
+  margin-top: 10px;
+  background-color: #47B5B7;
+  border: 1px solid grey;
+  font-size: 19px;
+  color: white;
+  text-shadow: 1px 1px 1px grey;
+}
+
+/*-- Checklist Display --*/
+#display_budget_rows {
+  width: 82%;
+  margin: 10px auto;
+}
+
+.element {
+  border: 1px solid grey;
+  padding: 125px 5px;
+  text-align: center;
+  height: 300px;
+}
+
+#revise_checklist {
+  text-align: center;
+}
+
+#revise_checklist button {
+  text-align: center;
+  margin-top: 10px;
+  background-color: #47B5B7;
+  border: 1px solid grey;
+  font-size: 19px;
+  color: white;
+  text-shadow: 1px 1px 1px grey;
 }

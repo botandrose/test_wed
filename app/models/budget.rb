@@ -1,14 +1,42 @@
 # requiring active_model is necessary for the budget model to inherit from the ActiveRecord model base, but without requiring database support
 require 'active_model' 
-require 'integer_accessor'
 
 class Budget 
   include ActiveModel::Model
-  extend IntegerAccessor
 
   def total_budget
     months_until * monthly_savings + amount_saved
   end
-# the integer_accessor is eliminating the need to have methods for each input that allows them to take in a value and convert it to an integer then display it (or a default value)
-  integer_accessor :speculated_amount, :amount_saved, :months_until, :monthly_savings
+
+  def speculated_amount= value
+    @speculated_amount = value.to_i
+  end
+
+  def speculated_amount
+    @speculated_amount || 0
+  end
+
+  def amount_saved= value
+    @amount_saved = value.to_i
+  end
+
+  def amount_saved
+    @amount_saved || 0
+  end
+
+  def months_until= value
+    @months_until = value.to_i
+  end
+
+  def months_until
+    @months_until || 0
+  end
+
+  def monthly_savings= value
+    @monthly_savings = value.to_i
+  end
+
+  def monthly_savings
+    @monthly_savings || 0
+  end
 end

@@ -4,8 +4,9 @@
   <title>TestWedding</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700|Great+Vibes|Poiret+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700|Great+Vibes|Poiret+One|Merriweather:400,700,400italic,900' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
@@ -15,7 +16,7 @@
       <div id="header" class="col-md-8">
         <h1><%= yield(:header) %></h1>
       </div>
-      <div id="subheader"class="col-md-8 col-md-offset-1">
+      <div id="subheader" class="col-md-8 col-md-offset-1">
         <h3><%= yield(:subheader) %></h3>
       </div>
     </div>
@@ -23,8 +24,12 @@
     <div class="row">
       <p class="col-md-10 col-md-offset-1 lead">
         <%= yield(:lead) %>
+      </p>      
+      <p class="col-md-10 col-md-offset-1 instructions">
+        <%= yield(:instructions) %>
       </p>
     </div>
+
 
   <%= yield %>
 

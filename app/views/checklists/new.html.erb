@@ -1,0 +1,37 @@
+<% content_for(:header) do %>
+  Making a Checklist
+<% end %>
+
+<% content_for(:subheader) do %>
+  Do you know what you want?
+<% end %>
+
+<% content_for(:lead) do %>
+  Wedding planning can be time-consuming, complicated and overwhelming. This Wedding for 1000 Checklist makes the process less frustrating and more fun by enabling you to better determine and prioritize your wedding needs.<br><br>
+
+  Spend a few minutes thinking about those elements of a wedding that are most meaningful to you. What are your Big Day Must Haves? When you're finished, click <em>Help Me Plan!</em> and get started!
+<% end %>
+
+<div class="row">
+  <div class="checklist_form">
+    <%= form_for @checklist, url: checklist_path do |form| %>
+
+      <% elements.each do |name, value| %>
+        <div class="col-md-5 col-md-offset-1 form-group">
+          <label>
+            <input type="checkbox" name="checklist[selected_element_names][]" value="<%= name %>"> <%= name %>
+          </label>
+        </div>
+      <% end %>
+
+
+      <%= form.hidden_field :total_budget %>
+
+      <div class="clear"></div>
+
+      <div class="col-md-12" id="submit_checklist">
+        <button class="btn btn-default">Help Me Plan!</button>
+      </div>
+    <% end %>
+  </div>
+</div>
